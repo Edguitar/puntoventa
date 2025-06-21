@@ -5,17 +5,20 @@ import { useState } from 'react';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false) 
-  const{themeStyle}= useThemeStore();
+  const {themeStyle}= useThemeStore();
   return (
-    <ThemeProvider theme={{themeStyle}}>    
- <Container>
+    <ThemeProvider theme={themeStyle}>    
+ <Container className={sidebarOpen ? "active" : ""}>
     <GlobalStyles/>
     <section className="contentSidebar">
-      <Sidebar state={sidebarOpen} 
+      <Sidebar 
+      state={sidebarOpen} 
       setState={()=>setSidebarOpen(!sidebarOpen)}/>
       </section>
     <section className="contentMenuHamburger">🍕</section>
-    <section className="contentRouters"><MyRoutes/></section>
+    <section className="contentRouters">
+      <MyRoutes/>
+      </section>
     </Container>
     </ThemeProvider>
   );
