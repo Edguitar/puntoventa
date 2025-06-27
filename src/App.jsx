@@ -30,14 +30,14 @@ const Container = styled.main`
   color: ${({ theme }) => theme.text};
   .contentSidebar {
     display: none;
-     background-color: rgba(78, 45, 78, 0.5); 
+     /* background-color: rgba(78, 45, 78, 0.5);  */
   }
   .contentMenuhambur {
     position: absolute;
-    background-color: rgba(53, 219, 11, 0.5); 
+    /* background-color: rgba(53, 219, 11, 0.5);  */
   }
   .contentRouters {
-   background-color: rgba(231, 13, 136, 0.5); 
+   /* background-color: rgba(231, 13, 136, 0.5);  */
     grid-column: 1;
     width: 100%;
   }

@@ -5,6 +5,6 @@ body{
     padding:0;
     box-sizing:border-box;
     font-family: 'Poppins', sans-serif; 
-    background-color: black;
+    background-color: ${({theme})=>theme.bgtotal};
     color: #fff;
 }`
